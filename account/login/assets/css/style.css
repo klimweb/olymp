@@ -1,0 +1,625 @@
+html, body {
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    font: normal 14px Lato, Arial, sans-serif;
+    background-color: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clear {
+    clear: both;
+}
+
+.wrapper {
+    min-width: 1260px;
+}
+
+.header {
+    height: 70px;
+    border-bottom: 1px solid #2c2d30;
+}
+
+.__header {
+    width: 1260px;
+    height: 70px;
+    margin: 0 auto;
+    position: relative;
+    background-color: #000000;
+}
+
+.__header > .logo-brand {
+    width: 116px;
+    height: 15px;
+    top: 25px;
+    left: 0;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-image: url(../images/header/logo.png);
+}
+
+.__header > .logo-brand a {
+    display: block;
+    cursor: pointer;
+    height: 15px;
+}
+
+.__header > .navigation {
+    width: 400px;
+    height: 70px;
+    float: left;
+    margin-left: 150px;
+    position: relative;
+}
+
+.__header > .navigation li {
+    float: left;
+    margin-right: 30px;
+    list-style: none;
+    margin-top: 24px;
+}
+
+.__header > .navigation li a {
+    color: #575b66;
+    width: 50px;
+    font: bold 16px Lato, Arial, sans-serif;
+    background-repeat: no-repeat;
+    padding-right: 26px;
+    background-position: right -35px;
+    background-image: url(../images/header/arrow-down.png);
+}
+
+.__header > .navigation li a:hover {
+    color: #FFFFFF;
+    transition: 0.4s all ease;
+    background-position: right 7px;
+}
+
+.__header > .navigation li a.left-border {
+    padding-left: 30px;
+    border-left: 1px solid #2c2d30;
+}
+
+.profile {
+    width: 280px;
+    height: 38px;
+    float: right;
+    margin-top: 16px;
+}
+
+.profile .login {
+    float: left;
+    width: 96px;
+    height: 38px;
+    text-align: center;
+    border-radius: 6px;
+    background-color: #0054FF;
+}
+
+.profile .login:hover {
+    background-color: #ec5e54;
+    transition: 0.4s all ease;
+}
+
+.profile .login a {
+    color: #FFFFFF;
+    text-align: center;
+    display: block;
+    height: 38px;
+    cursor: pointer;
+    font: bold 16px/38px Lato, Arial, sans-serif;
+}
+
+.profile .register {
+    float: right;
+    width: 150px;
+    height: 38px;
+    text-align: center;
+    border-radius: 6px;
+    background-color: #0054FF;
+}
+
+.profile .register:hover {
+    background-color: #ec5e54;
+    transition: 0.4s all ease;
+}
+
+.profile .register a {
+    color: #FFFFFF;
+    text-align: center;
+    display: block;
+    height: 38px;
+    cursor: pointer;
+    font: bold 16px/38px Lato, Arial, sans-serif;
+}
+
+.header,
+.inner-header {
+    height: 70px;
+    border-bottom: 1px solid #2c2d30;
+    background-color: #000000;
+}
+
+.inner-header {
+    width: 1260px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/*BEGIN LOGO*/
+.logo {
+    width: 116px;
+    height: 15px;
+    top: 25px;
+    left: 0;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-image: url(../images/header/logo.png);
+}
+
+.logo > a {
+    height: 15px;
+    cursor: pointer;
+    display: block;
+    outline: none;
+}
+/*END LOGO*/
+
+/*BEGIN NAVIGATION*/
+.navigation {
+    width: 500px;
+    height: 70px;
+    float: left;
+    top: 23px;
+    margin-left: 150px;
+    position: relative;
+    z-index: 1;
+}
+  
+.navigation > ul li a {
+    color: #575b66;
+    width: 50px;
+    padding-bottom: 4px;
+    font: bold 16px Lato, Arial, sans-serif;
+    background-repeat: no-repeat;
+    padding-right: 26px;
+    background-position: right -35px;
+    background-image: url(../images/header/arrow-down.png);
+}
+
+.navigation > ul > li > a:hover {
+    color: #FFFFFF;
+    transition: 0.4s all ease;
+    background-position: right 7px;
+}
+
+.navigation > ul > li > a.left-border {
+    padding-left: 30px;
+    border-left: 1px solid #2c2d30;
+}
+
+.navigation > ul > li {
+    display: block;
+    float: left;
+    margin-left: 35px;
+    position: relative;
+    text-decoration: none;
+    z-index: 1;
+}
+/*END NAVIGATION*/
+
+/*BEGIN DROPDOWN MENU*/
+.navigation ul.dropdown-menu {
+    height: 160px;
+    position: absolute;
+    z-index: 9999;
+    padding: 0 20px;
+}
+
+.navigation ul.dropdown-menu li {
+    position: relative;
+    left: -7px;
+    float:left;
+}
+
+.navigation ul.dropdown-menu {
+    width: 570px !important;
+    top: 13px;
+    left: 0;
+    padding-top: 40px;
+    position: absolute;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom: 3px solid #0054FF;
+    background-color: #000000;
+    z-index: 9999;
+}
+
+.navigation ul.dropdown-menu li:hover {
+    transition: 0.9s all ease;
+    cursor: pointer;
+}
+
+.navigation ul.dropdown-menu li a {
+    height: 35px;
+    
+    position: relative;
+    display: block;
+    font: normal 12px/36px 'Roboto medium', Lato, Arial, sans-serif;
+}
+
+.navigation ul.dropdown-menu li.pubg:hover,
+.navigation ul.dropdown-menu li.call-of-duty:hover,
+.navigation ul.dropdown-menu li.garena:hover,
+.navigation ul.dropdown-menu li.brawl:hover {
+    opacity: 0.7;
+    transition: 0.4s all ease;
+}
+
+.navigation ul.dropdown-menu li a.pubg {
+    width: 120px;
+    height: 160px;
+    top: -50px;
+    left: 0;
+    position: relative;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-position:  0 40px;
+    background-image: url(../images/header/pubg.jpg);
+}
+
+.navigation ul.dropdown-menu li a.call-of-duty {
+    width: 120px;
+    height: 160px;
+    top: -214px;
+    left: 150px;
+    position: relative;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-position:  0 40px;
+    background-image: url(../images/header/call-of-duty.jpg);
+}
+
+.navigation ul.dropdown-menu li a.garena {
+    width: 120px;
+    height: 160px;
+    top: -378px;
+    left: 300px;
+    position: relative;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-position:  0 40px;
+    background-image: url(../images/header/garena.jpg);
+}
+
+.navigation ul.dropdown-menu li a.brawl {
+    width: 120px;
+    height: 160px;
+    top: -542px;
+    left: 450px;
+    position: relative;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-position:  0 40px;
+    background-image: url(../images/header/brawl.jpg);
+}
+
+.navigation ul.dropdown-menu li a span {
+    font-size: 14px;
+    color: #FFFFFF;
+    top: 160px;
+    position: relative;
+}
+
+.navigation ul li ul {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.7s ease;
+    position: absolute;
+    margin-top: 1rem;
+    left: 0;
+    display: none;
+}
+  
+.navigation ul li:hover > ul,
+.navigation ul li:focus-within > ul, /* this is the line we add */
+.navigation ul li ul:hover {
+    width: 180px;
+    transition: all 0.6s ease;
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+  
+.navigation ul li ul li {
+    clear: both;
+    margin-left: 7px;
+    width: 180px; 
+}
+
+/*END DROPDOWN MENU*/
+
+/*BEGIN USER ACCOUNT*/
+.user-account {
+    width: 280px;
+    height: 38px;
+    float: right;
+    margin-top: 16px;
+}
+
+.user-account span {
+    color: #FFFFFF;
+    left: 109px;
+    position: absolute;
+    font: bold 13px/40px Lato, Arial, sans-serif;
+}
+
+.sign-in {
+    float: left;
+    width: 96px;
+    height: 38px;
+    text-align: center;
+    border-radius: 6px;
+    background-color: #0054FF;
+}
+
+.register {
+    float: right;
+    width: 150px;
+    height: 38px;
+    text-align: center;
+    border-radius: 6px;
+    background-color: #0054FF;
+}
+
+.sign-in > a,
+.register > a {
+    color: #FFFFFF;
+    text-align: center;
+    display: block;
+    height: 38px;
+    cursor: pointer;
+    font: bold 16px/38px Lato, Arial, sans-serif;
+}
+
+.sign-in:hover,
+.register:hover {
+    background-color: #ec5e54;
+    transition: 0.4s all ease;
+}
+/*END USER ACCOUNT*/
+
+.main {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../images/main/bg-main.jpg);
+}
+
+.__main {
+    width: 1260px;
+    height: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.login_fields {
+    width: 410px;
+    height: 360px;
+    top: 117px;
+    left: 50px;
+    position: absolute;
+}
+
+.login_fields h2 {
+    color: #FFFFFF;
+    word-spacing: 2px;
+    margin-bottom: 60px;
+    font: bold 24px Lato, Arial, sans-serif;
+}
+
+.login_fields input {
+    width: 295px;
+    height: 47px;
+    color: #b5b5ac;
+    padding-left: 15px;
+    margin-bottom: 52px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom: 2px solid #5c5a54;
+    background-color: #363534;
+}
+
+.login_fields input:focus {
+    transition: 0.4s all ease;
+    border-bottom-color: #0054ff;
+}
+
+.login_fields input[type=submit] {
+    color: #FFFFFF;
+    width: 113px;
+    height: 41px;
+    text-align: center;
+    padding-left: 0;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    font: bold 17px Lato, Arial, sans-serif;
+    background-color: #0054ff;
+}
+
+.login_fields input[type=submit]:hover {
+    color: #FFFFFF;
+    background-color: #ec5e54;
+    transition: 0.4s all ease;
+    cursor: pointer;
+}
+
+.login_fields input::placeholder {
+    color: #b5b5ac;
+    font: normal 13px/47px Lato, Arial, sans-serif;
+}
+
+.footer {
+    margin-top: 100px;
+}
+
+.__footer {
+    width: 1260px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.__footer .social-icons {
+    width: 160px;
+    height: 18px;
+    top: 0;
+    left: 100px;
+    position: absolute;
+}
+
+.__footer .social-icons a {
+    float: left;
+    margin-right: 25px;
+}
+
+.__footer .social-icons a:hover {
+    opacity: 0.6;
+    transition: 0.4s all ease;
+}
+
+.__footer .facebook {
+    width: 9px;
+    height: 18px;
+    display: block;
+    background-repeat: no-repeat;
+    background-image: url(../images/footer/social-icons/1.png);
+}
+
+.__footer .twitter {
+    width: 16px;
+    height: 14px;
+    display: block;
+    margin-top: 3px;
+    background-repeat: no-repeat;
+    background-image: url(../images/footer/social-icons/2.png);
+}
+
+.__footer .google-plus {
+    width: 18px;
+    height: 18px;
+    display: block;
+    background-repeat: no-repeat;
+    background-image: url(../images/footer/social-icons/3.png);
+}
+
+.__footer .instagram {
+    width: 16px;
+    height: 17px;
+    display: block;
+    background-repeat: no-repeat;
+    background-image: url(../images/footer/social-icons/4.png);
+}
+
+.footer-nav {
+    width: 420px;
+    height: 20px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.__footer ul li {
+    float: left;
+    list-style: none;
+}
+
+.__footer ul li a {
+    color: #4d3f34;
+    margin-right: 25px;
+    font: normal 15px Lato, Arial, sans-serif;
+}
+
+.__footer ul li a:hover {
+    color: #FFFFFF;
+    transition: 0.4s all ease;
+}
+
+.__footer .sixteen-plus {
+    width: 32px;
+    height: 32px;
+    top: 0;
+    right: 200px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-image: url(../images/footer/sixteen-plus.png);
+}
+
+.__footer p.copyright {
+    text-align: center;
+    color: #4d3f34;
+    margin-top: 25px;
+    font: normal 16px Lato, Arial, sans-serif;
+}
+
+.__footer .payment-systems {
+    width: 540px;
+    height: 49px;
+    margin: 50px auto 0 auto;
+}
+
+.__footer .payment-systems  a {
+    float: left;
+    display: block;
+    margin-right: 40px;
+}
+
+.__footer .payment-systems  a:hover {
+    opacity: 0.6;
+    transition: 0.4s all ease;
+}
+
+.__footer .payment-systems a.mastercard {
+    width: 60px;
+    height: 36px;
+    background-repeat: no-repeat;
+    background-image: url(../images/footer/payment-systems/mastercard.png);
+}
+
+.__footer .payment-systems a.visa {
+    width: 80px;
+    height: 26px;
+    margin-top: 5px;
+    background-repeat: no-repeat;
+    background-image: url(../images/footer/payment-systems/visa.png);
+}
+
+.__footer .payment-systems a.qiwi {
+    width: 46px;
+    height: 46px;
+    margin-top: -4px;
+    background-repeat: no-repeat;
+    background-image: url(../images/footer/payment-systems/qiwi.png);
+}
+
+.__footer .payment-systems a.yandex {
+    width: 185px;
+    height: 49px;
+    margin-top: -15px;
+    background-repeat: no-repeat;
+    background-image: url(../images/footer/payment-systems/yandex.png);
+}

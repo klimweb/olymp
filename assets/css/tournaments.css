@@ -1,0 +1,181 @@
+.slick-content {
+    color: #ffffff;
+    width: 1260px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slider {
+    width: 1260px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.slider div {
+    width: 1260px;
+    height: 500px;
+    float: left;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+._one-moment {
+    background-repeat: no-repeat;
+    z-index: -999;
+    position: relative;
+    background-image: url(../../profile/assets/images/slider/1.jpg);
+}
+
+.slider > div .info {
+    width: 700px;
+    height: 200px;
+    bottom: 10px;
+    left: 70px;
+    position: absolute;
+    text-align: left;
+    top: auto;
+    bottom: 10px;
+}
+
+.slider > div .info span.time {
+    color: #FFFFFF;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.slider > div .info span.time span.hours {
+    font-size: 12px;
+    margin-left: 7px;
+}
+
+.slider > div .info h2 {
+    font-size: 35px;
+    margin-top: 7px;
+    font-weight: bold;
+}
+
+.slider > div .info p {
+    color: #867572;
+    font-size: 19px;
+    margin-top: 12px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.slider div.info p > input {
+    color: #ffffff;
+    width: 220px;
+    height: 55px;
+    display: block;
+    font-size: 17px;
+    font-weight: bold;
+    word-spacing: 2px;
+    background-color: #0054FF;
+    border-radius: 4px;
+}
+
+.slider div.info p > span.rules {
+    font-size: 14px;
+    font-weight: bold;
+    bottom: 10px;
+    left: 240px;
+    position: absolute;
+}
+
+.slider div.info p > span > a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.slider div.info p > span > a:hover {
+    color: #0054FF;
+    cursor: pointer;
+    transition: 0.4s all ease;
+}
+
+.slider div.info p > input:hover {
+    cursor: pointer;
+    transition: 0.4s all ease;
+    background-color: #ec5e54;
+}
+
+.slider div.info span.tour-info {
+    color: #cccccc;
+    top: 140px;
+    left: 500px;
+    display: block;
+    position: absolute;
+    font-size: 19px;
+    font-weight: bold;
+    padding-right: 50px;
+    background-repeat: no-repeat;
+    background-position: 150px 4px;
+    background-image: url(../../profile/assets/images/slider/next-arrow1.png);
+}
+
+.slider div.info span.tour-info:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.4s all ease;
+    background-position: 155px;
+}
+
+._two-moment {
+    background-repeat: no-repeat;
+    z-index: -999;
+    position: relative;
+    background-image: url(../../profile/assets/images/slider/2.jpg);
+}
+
+._three-moment {
+    background-repeat: no-repeat;
+    z-index: -999;
+    position: relative;
+    background-image: url(../../profile/assets/images/slider/3.jpg);
+}
+
+._four-moment {
+    background-repeat: no-repeat;
+    z-index: -999;
+    position: relative;
+    background-image: url(../../profile/assets/images/slider/4.jpg);
+}
+
+.arrows {
+    width: 1260px;
+    height: 24px;
+    margin: 0 auto;
+    z-index: 999999;
+    top: 220px;
+    position: absolute;
+}
+
+.arrows .go-left {
+    width: 24px;
+    height: 24px;
+    float: left;
+    margin-left: 15px;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-image: url(../../profile/assets/images/slider/prev-arrow.png);
+}
+
+.arrows .go-right {
+    width: 24px;
+    height: 24px;
+    float: right;
+    margin-right: 15px;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-image: url(../../profile/assets/images/slider/next-arrow.png);
+}
+
+.arrows .go-left:hover,
+.arrows .go-right:hover {
+    opacity: 0.6;
+    cursor: pointer;
+    transition: 0.4s all ease;
+}

@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 1000px) {
+    /* For 1000px displays */
+    .__header,
+    .__main,
+    .__pro-players,
+    .__footer {
+        width: 980px;
+    }
+
+    .main {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(../images/main/background_1000px.png);
+    }
+
+    .background .left,
+    .background .right {
+        background: none;
+    }
+
+    .variants div.formats {
+        margin-left: 80px;
+    }
+
+    .variants div.payouts {
+        float: left;
+        margin: 60px 0 0 290px;
+    }
+
+    .footer {
+        margin-top: 260px;
+    }
+
+    .__footer .social-icons {
+        left: 0;
+        position: absolute;
+    }
+
+    .__footer .sixteen-plus {
+        right: 70px;
+        position: absolute;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    /* For 768px displays */
+}
+
+@media screen and (max-width: 480px) {
+    /* For 480px displays */
+}
+
+@media screen and (max-width: 320px) {
+    /* For 320px displays */
+}

@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 1000px) {
+    /* For 1000px displays */
+}
+
+@media screen and (max-width: 768px) {
+    /* For 768px displays */
+    .inner-header,
+    .info,
+    .__pro-players,
+    .__footer {
+        width: 748px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* For 480px displays */
+}
+
+@media screen and (max-width: 320px) {
+    /* For 320px displays */
+}

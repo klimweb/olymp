@@ -1,0 +1,915 @@
+html, body {
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    font: normal 14px Lato, Arial, sans-serif;
+    background-color: #000000;
+}
+
+.clear {
+    clear: both;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    min-width: 1260px;
+}
+
+.header {
+    height: 70px;
+    border-bottom: 1px solid #2c2d30;
+}
+
+.__header {
+    width: 1260px;
+    height: 70px;
+    margin: 0 auto;
+    position: relative;
+    background-color: #000000;
+}
+
+.__header > .logo-brand {
+    width: 116px;
+    height: 15px;
+    top: 25px;
+    left: 0;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-image: url(../images/header/logo.png);
+}
+
+.__header > .logo-brand a {
+    display: block;
+    cursor: pointer;
+    height: 15px;
+}
+
+.__header > .navigation {
+    width: 300px;
+    height: 70px;
+    float: left;
+    margin-left: 150px;
+    position: relative;
+}
+
+.__header > .navigation li {
+    margin-right: 30px;
+    list-style: none;
+    margin-top: 24px;
+}
+
+.__header > .navigation li a {
+    color: #575b66;
+    float: left;
+    position: relative;
+    font: bold 16px Lato, Arial, sans-serif;
+    background-repeat: no-repeat;
+    padding-right: 26px;
+    background-position: right -35px;
+    background-image: url(../images/header/arrow-down.png);
+}
+
+.__header > .navigation li a:hover {
+    color: #FFFFFF;
+    transition: 0.4s all ease;
+    background-position: right 7px;
+}
+
+.__header > .navigation li a.left-border {
+    padding-left: 30px;
+    margin-right: 30px;
+    display: block !important;
+    border-left: 1px solid #2c2d30;
+}
+
+.profile {
+    width: 280px;
+    height: 38px;
+    float: right;
+    margin-top: 16px;
+}
+
+.profile .login {
+    float: left;
+    width: 96px;
+    height: 38px;
+    text-align: center;
+    border-radius: 6px;
+    background-color: #0054FF;
+}
+
+.profile .login:hover {
+    opacity: 0.9;
+    transition: 0.4s all ease;
+}
+
+.profile .login a {
+    color: #FFFFFF;
+    text-align: center;
+    display: block;
+    height: 38px;
+    cursor: pointer;
+    font: bold 16px/38px Lato, Arial, sans-serif;
+}
+
+.profile .register {
+    float: right;
+    width: 150px;
+    height: 38px;
+    text-align: center;
+    border-radius: 6px;
+    background-color: #0054FF;
+}
+
+.profile .register:hover {
+    opacity: 0.9;
+    transition: 0.4s all ease;
+}
+
+.profile .register a {
+    color: #FFFFFF;
+    text-align: center;
+    display: block;
+    height: 38px;
+    cursor: pointer;
+    font: bold 16px/38px Lato, Arial, sans-serif;
+}
+
+.header,
+.inner-header {
+    height: 70px;
+    border-bottom: 1px solid #2c2d30;
+    background-color: #000000;
+}
+
+.inner-header {
+    width: 1260px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/*BEGIN LOGO*/
+.logo {
+    width: 116px;
+    height: 15px;
+    top: 25px;
+    left: 0;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-image: url(../images/header/logo.png);
+}
+
+.logo > a {
+    height: 15px;
+    cursor: pointer;
+    display: block;
+    outline: none;
+}
+/*END LOGO*/
+
+/*BEGIN NAVIGATION*/
+.navigation {
+    width: 500px;
+    height: 70px;
+    float: left;
+    top: 23px;
+    margin-left: 150px;
+    position: relative;
+    z-index: 1;
+}
+  
+.navigation > ul li a {
+    color: #575b66;
+    width: 50px;
+    padding-bottom: 4px;
+    font: bold 16px Lato, Arial, sans-serif;
+    background-repeat: no-repeat;
+    padding-right: 26px;
+    background-position: right -35px;
+    background-image: url(../images/header/arrow-down.png);
+}
+
+.navigation > ul > li > a:hover {
+    color: #FFFFFF;
+    transition: 0.4s all ease;
+    background-position: right 7px;
+}
+
+.navigation > ul > li > a.left-border {
+    padding-left: 30px;
+    border-left: 1px solid #2c2d30;
+}
+
+.navigation > ul > li {
+    display: block;
+    float: left;
+    margin-left: 35px;
+    position: relative;
+    text-decoration: none;
+    z-index: 1;
+}
+/*END NAVIGATION*/
+
+/*BEGIN DROPDOWN MENU*/
+.navigation ul.dropdown-menu {
+    height: 160px;
+    position: absolute;
+    z-index: 9999;
+    padding: 0 20px;
+}
+
+.navigation ul.dropdown-menu li {
+    position: relative;
+    left: -7px;
+    float:left;
+}
+
+.navigation ul.dropdown-menu {
+    width: 570px !important;
+    top: 13px;
+    left: 0;
+    padding-top: 40px;
+    position: absolute;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom: 3px solid #0054FF;
+    background-color: #000000;
+    z-index: 9999;
+}
+
+.navigation ul.dropdown-menu li:hover {
+    transition: 0.9s all ease;
+    cursor: pointer;
+}
+
+.navigation ul.dropdown-menu li a {
+    height: 35px;
+    
+    position: relative;
+    display: block;
+    font: normal 12px/36px 'Roboto medium', Lato, Arial, sans-serif;
+}
+
+.navigation ul.dropdown-menu li.pubg:hover,
+.navigation ul.dropdown-menu li.call-of-duty:hover,
+.navigation ul.dropdown-menu li.garena:hover,
+.navigation ul.dropdown-menu li.brawl:hover {
+    opacity: 0.7;
+    transition: 0.4s all ease;
+}
+
+.navigation ul.dropdown-menu li a.pubg {
+    width: 120px;
+    height: 160px;
+    top: -50px;
+    left: 0;
+    position: relative;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-position:  0 40px;
+    background-image: url(../images/header/pubg.jpg);
+}
+
+.navigation ul.dropdown-menu li a.call-of-duty {
+    width: 120px;
+    height: 160px;
+    top: -214px;
+    left: 150px;
+    position: relative;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-position:  0 40px;
+    background-image: url(../images/header/call-of-duty.jpg);
+}
+
+.navigation ul.dropdown-menu li a.garena {
+    width: 120px;
+    height: 160px;
+    top: -378px;
+    left: 300px;
+    position: relative;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-position:  0 40px;
+    background-image: url(../images/header/garena.jpg);
+}
+
+.navigation ul.dropdown-menu li a.brawl {
+    width: 120px;
+    height: 160px;
+    top: -542px;
+    left: 450px;
+    position: relative;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-position:  0 40px;
+    background-image: url(../images/header/brawl.jpg);
+}
+
+.navigation ul.dropdown-menu li a span {
+    font-size: 14px;
+    color: #FFFFFF;
+    top: 160px;
+    position: relative;
+}
+
+.navigation ul li ul {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.7s ease;
+    position: absolute;
+    margin-top: 1rem;
+    left: 0;
+    display: none;
+}
+  
+.navigation ul li:hover > ul,
+.navigation ul li:focus-within > ul, /* this is the line we add */
+.navigation ul li ul:hover {
+    width: 180px;
+    transition: all 0.6s ease;
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+  
+.navigation ul li ul li {
+    clear: both;
+    margin-left: 7px;
+    width: 180px; 
+}
+
+/*END DROPDOWN MENU*/
+
+/*BEGIN USER ACCOUNT*/
+.user-account {
+    width: 330px;
+    height: 60px;
+    float: right;
+    margin-top: 3px;
+}
+
+.notification {
+    width: 60px;
+    height: 60px;
+    float: left;
+    position: relative;
+}
+
+.notification > a {
+    width: 30px;
+    height: 30px;
+    display: block;
+    top: 14px;
+    right: 0;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-image: url(../images/header/notification.png);
+}
+
+.sign-in > a{
+    color: #575b66;
+    text-align: right;
+    display: block;
+    height: 60px;
+    width: 220px;
+    right: 0;
+    position: absolute;
+    cursor: pointer;
+    font: bold 15px/60px Lato, Arial, sans-serif;
+    background-repeat: no-repeat;
+    background-position: right 0;
+    background-image: url(../images/header/user_man.png);
+}
+
+.sign-in > a:hover,
+.notification > a:hover {
+    opacity: 0.7;
+    transition: 0.4s all ease;
+}
+
+.sign-in > a > span {
+    right: 80px;
+    position: absolute;
+}
+
+/*END USER ACCOUNT*/
+
+.slick-content {
+    color: #ffffff;
+    width: 1260px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slider {
+    width: 1260px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.slider div {
+    width: 1260px;
+    height: 500px;
+    float: left;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+._one-moment {
+    background-repeat: no-repeat;
+    z-index: -999;
+    position: relative;
+    background-image: url(../images/slider/1.jpg);
+}
+
+.slider > div .info {
+    width: 700px;
+    height: 200px;
+    bottom: 10px;
+    left: 70px;
+    position: absolute;
+}
+
+.slider > div .info span.time {
+    color: #FFFFFF;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.slider > div .info span.time span.hours {
+    font-size: 12px;
+    margin-left: 7px;
+}
+
+.slider > div .info h2 {
+    font-size: 35px;
+    margin-top: 7px;
+    font-weight: bold;
+}
+
+.slider > div .info p {
+    color: #867572;
+    font-size: 19px;
+    margin-top: 12px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.slider div.info p > input {
+    color: #ffffff;
+    width: 220px;
+    height: 55px;
+    display: block;
+    font-size: 17px;
+    font-weight: bold;
+    word-spacing: 2px;
+    background-color: #0054FF;
+    border-radius: 4px;
+}
+
+.slider div.info p > span.rules {
+    font-size: 14px;
+    font-weight: bold;
+    bottom: 10px;
+    left: 240px;
+    position: absolute;
+}
+
+.slider div.info p > span > a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.slider div.info p > span > a:hover {
+    color: #0054FF;
+    cursor: pointer;
+    transition: 0.4s all ease;
+}
+
+.slider div.info p > input:hover {
+    cursor: pointer;
+    transition: 0.4s all ease;
+    background-color: #ec5e54;
+}
+
+.slider div.info span.tour-info {
+    color: #cccccc;
+    top: 140px;
+    left: 500px;
+    display: block;
+    position: absolute;
+    font-size: 19px;
+    font-weight: bold;
+    padding-right: 50px;
+    background-repeat: no-repeat;
+    background-position: 150px 4px;
+    background-image: url(../images/slider/next-arrow1.png);
+}
+
+.slider div.info span.tour-info:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.4s all ease;
+    background-position: 155px;
+}
+
+._two-moment {
+    background-repeat: no-repeat;
+    z-index: -999;
+    position: relative;
+    background-image: url(../images/slider/2.jpg);
+}
+
+._three-moment {
+    background-repeat: no-repeat;
+    z-index: -999;
+    position: relative;
+    background-image: url(../images/slider/3.jpg);
+}
+
+._four-moment {
+    background-repeat: no-repeat;
+    z-index: -999;
+    position: relative;
+    background-image: url(../images/slider/4.jpg);
+}
+
+.arrows {
+    width: 1260px;
+    height: 24px;
+    margin: 0 auto;
+    z-index: 999999;
+    top: 220px;
+    position: absolute;
+}
+
+.arrows .go-left {
+    width: 24px;
+    height: 24px;
+    float: left;
+    margin-left: 15px;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-image: url(../images/slider/prev-arrow.png);
+}
+
+.arrows .go-right {
+    width: 24px;
+    height: 24px;
+    float: right;
+    margin-right: 15px;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-image: url(../images/slider/next-arrow.png);
+}
+
+.arrows .go-left:hover,
+.arrows .go-right:hover {
+    opacity: 0.6;
+    cursor: pointer;
+    transition: 0.4s all ease;
+}
+
+.next-hour {
+    width: 1260px;
+    margin: 0 auto 0 auto;
+}
+
+.__next-hour {
+    height: inherit;
+    margin: 30px auto 0 auto;
+}
+
+.__next-hour h2 {
+    font-size: 22px;
+    color: #fff;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    margin-bottom: 13px;
+    font-weight: bold;
+}
+
+.__next-hour div.h-line {
+    width: 1260px;
+    height: 1px;
+    background-color: #2c2d30;
+}
+
+.games {
+    width: 1260px;
+    padding: 40px 0;
+}
+
+.game {
+    height: 170px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    position: relative;
+    border: 2px solid transparent;
+}
+
+.h-line {
+    width: 1260px;
+    height: 1px;
+    margin: 20px 0;
+    background-color: #867572;
+}
+
+.area-1,
+.area-2,
+.area-3,
+.area-4 {
+    height: 170px;
+    float: left;
+    position: relative;
+}
+
+.area-1 {
+    width: 500px;
+    margin-right: 100px;
+}
+
+.area-2 {
+    width: 200px;
+    float: left;
+}
+
+.area-2 span,
+.area-3 span,
+.area-4 span {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.area-4 {
+    margin-left: 100px;
+}
+
+.area-2 span.any-description,
+.area-3 span.any-description {
+    color: #867572;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.area-1 .game-image {
+    width: 170px;
+    height: 170px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    float: left;
+    margin-right: 30px;
+    background-position: center center;
+    background-image: url(../images/nexthour/1.jpg);
+}
+
+.area-1 span.date {
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.area-1 span.name {
+    font-weight: bold;
+    font-size: 21px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.game:hover {
+    border: 2px solid #0054FF;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    transition: 0.6s all ease;
+    background-image: url(../images/nexthour/hover-02.jpg);
+}
+
+.area-1 span.game-description {
+    font-size: 16px;
+    color: #867572;
+    display: block;
+}
+
+.area-1 p input {
+    color: #ffffff;
+    width: 180px;
+    height: 40px;
+    display: block;
+    font-size: 14.5px;
+    font-weight: bold;
+    word-spacing: 2px;
+    bottom: 10px;
+    left: 195px;
+    position: absolute;
+    background-color: #0054FF;
+    border-radius: 4px;
+}
+
+.area-1 p input:hover {
+    cursor: pointer;
+    transition: 0.4s all ease;
+    background-color: #ec5e54;
+}
+
+.game-status {
+    width: 650px;
+    height: 50px;
+    right: 30px;
+    bottom: 4px;
+    position: absolute;
+}
+
+.game-status div {
+    width: 150px;
+    height: 50px;
+    float: left;
+}
+
+.game-status div span {
+    color: #FFFFFF;
+    font-size: 17.5px;
+    font-weight: bold;
+    display: block;
+    text-align: right;
+    background-repeat: no-repeat;
+    background-position: 45px 0;
+    background-image: url('../images/nexthour/trophy.png');
+}
+
+.game-status div.any-desc {
+    width: 200px;
+}
+
+.game-status div.any-desc span.prizes {
+    background: none !important;
+}
+
+.footer {
+    margin-top: 100px;
+}
+
+.__footer {
+    width: 1260px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.__footer .social-icons {
+    width: 160px;
+    height: 18px;
+    top: 0;
+    left: 100px;
+    position: absolute;
+}
+
+.__footer .social-icons a {
+    float: left;
+    margin-right: 25px;
+}
+
+.__footer .social-icons a:hover {
+    opacity: 0.6;
+    transition: 0.4s all ease;
+}
+
+.__footer .facebook {
+    width: 9px;
+    height: 18px;
+    display: block;
+    background-repeat: no-repeat;
+    background-image: url(../images/footer/social-icons/1.png);
+}
+
+.__footer .twitter {
+    width: 16px;
+    height: 14px;
+    display: block;
+    margin-top: 3px;
+    background-repeat: no-repeat;
+    background-image: url(../images/footer/social-icons/2.png);
+}
+
+.__footer .google-plus {
+    width: 18px;
+    height: 18px;
+    display: block;
+    background-repeat: no-repeat;
+    background-image: url(../images/footer/social-icons/3.png);
+}
+
+.__footer .instagram {
+    width: 16px;
+    height: 17px;
+    display: block;
+    background-repeat: no-repeat;
+    background-image: url(../images/footer/social-icons/4.png);
+}
+
+.footer-nav {
+    width: 420px;
+    height: 20px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.__footer ul li {
+    float: left;
+    list-style: none;
+}
+
+.__footer ul li a {
+    color: #4d3f34;
+    margin-right: 25px;
+    font: normal 15px Lato, Arial, sans-serif;
+}
+
+.__footer ul li a:hover {
+    color: #FFFFFF;
+    transition: 0.4s all ease;
+}
+
+.__footer .sixteen-plus {
+    width: 32px;
+    height: 32px;
+    top: 0;
+    right: 200px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-image: url(../images/footer/sixteen-plus.png);
+}
+
+.__footer p.copyright {
+    text-align: center;
+    color: #4d3f34;
+    margin-top: 25px;
+    font: normal 16px Lato, Arial, sans-serif;
+}
+
+.__footer .payment-systems {
+    width: 540px;
+    height: 49px;
+    margin: 50px auto 0 auto;
+}
+
+.__footer .payment-systems  a {
+    float: left;
+    display: block;
+    margin-right: 40px;
+}
+
+.__footer .payment-systems  a:hover {
+    opacity: 0.6;
+    transition: 0.4s all ease;
+}
+
+.__footer .payment-systems a.mastercard {
+    width: 60px;
+    height: 36px;
+    background-repeat: no-repeat;
+    background-image: url(../images/footer/payment-systems/mastercard.png);
+}
+
+.__footer .payment-systems a.visa {
+    width: 80px;
+    height: 26px;
+    margin-top: 5px;
+    background-repeat: no-repeat;
+    background-image: url(../images/footer/payment-systems/visa.png);
+}
+
+.__footer .payment-systems a.qiwi {
+    width: 46px;
+    height: 46px;
+    margin-top: -4px;
+    background-repeat: no-repeat;
+    background-image: url(../images/footer/payment-systems/qiwi.png);
+}
+
+.__footer .payment-systems a.yandex {
+    width: 185px;
+    height: 49px;
+    margin-top: -15px;
+    background-repeat: no-repeat;
+    background-image: url(../images/footer/payment-systems/yandex.png);
+}
+
+

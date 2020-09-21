@@ -1,0 +1,218 @@
+body {
+    color: #1a1a1a;
+    background-color: #F2F2F2;
+    font: normal 15px Graphik, Lato, Arial, sans-serif;
+}
+
+/* BEGIN REFOUND POLICY */
+
+.refound {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.__refound {
+    width: 1260px;
+    margin: 0 auto;
+}
+
+.brand-info {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.olymp-logo {
+    width: 200px;
+    height: 100px;
+    margin: 0 auto 80px auto;
+}
+
+.__refound h1 {
+    text-align: center;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    font: bold 40px Graphik, Lato, Arial, sans-serif;
+}
+
+.item-head {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+ul {
+    margin-left: 40px;
+}
+
+ul li {
+    list-style-type: disc;
+    margin-bottom: 20px;
+}
+
+.__liinner {
+    margin-left: 20px;
+}
+
+/* END REFOUND POLICY */
+
+/* BEGIN FOOTER */
+
+.footer {
+    width: 1280px;
+    margin: 100px auto 0 auto;
+}
+
+.__footer {
+    width: 1260px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.__footer .social-icons {
+    width: 160px;
+    height: 18px;
+    top: 0;
+    left: 100px;
+    position: absolute;
+}
+
+.__footer .social-icons a {
+    float: left;
+    margin-right: 25px;
+}
+
+.__footer .social-icons a:hover {
+    opacity: 0.6;
+    transition: 0.4s all ease;
+}
+
+.__footer .facebook {
+    width: 9px;
+    height: 18px;
+    display: block;
+    background-repeat: no-repeat;
+    background-image: url(../images/footer/social-icons/1.png);
+}
+
+.__footer .twitter {
+    width: 16px;
+    height: 14px;
+    display: block;
+    margin-top: 3px;
+    background-repeat: no-repeat;
+    background-image: url(../images/footer/social-icons/2.png);
+}
+
+.__footer .google-plus {
+    width: 18px;
+    height: 18px;
+    display: block;
+    background-repeat: no-repeat;
+    background-image: url(../images/footer/social-icons/3.png);
+}
+
+.__footer .instagram {
+    width: 16px;
+    height: 17px;
+    display: block;
+    background-repeat: no-repeat;
+    background-image: url(../images/footer/social-icons/4.png);
+}
+
+.footer-nav {
+    width: 420px;
+    height: 20px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.__footer ul li {
+    float: left;
+    list-style: none;
+}
+
+.__footer ul li a {
+    color: #1a1a1a;
+    margin-right: 25px;
+    text-decoration: none;
+    font: normal 15px Graphik, Lato, Arial, sans-serif;
+}
+
+.__footer ul li a:hover {
+    color: #4d3f34;
+    transition: 0.4s all ease;
+}
+
+.__footer .sixteen-plus {
+    width: 32px;
+    height: 32px;
+    top: 0;
+    right: 200px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-image: url(../images/footer/sixteen-plus.png);
+}
+
+.__footer p.copyright {
+    text-align: center;
+    color: #4d3f34;
+    margin-top: 25px;
+    font: normal 16px Lato, Arial, sans-serif;
+}
+
+.__footer .payment-systems {
+    width: 500px;
+    height: 49px;
+    outline: 1px solid #333;
+    margin: 50px auto 0 auto;
+}
+
+.__footer .payment-systems  a {
+    float: left;
+    display: block;
+}
+
+.__footer .payment-systems  a:hover {
+    opacity: 0.6;
+    transition: 0.4s all ease;
+}
+
+.__footer .payment-systems a.mastercard {
+    width: 60px;
+    height: 36px;
+    background-repeat: no-repeat;
+    background-image: url(../images/footer/payment-systems/mastercard.png);
+}
+
+.__footer .payment-systems a.visa {
+    width: 80px;
+    height: 26px;
+    margin-top: 5px;
+    left: 60px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-image: url(../images/footer/payment-systems/visa.png);
+}
+
+.__footer .payment-systems a.qiwi {
+    width: 46px;
+    height: 46px;
+    margin-top: -4px;
+    left: 140px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-image: url(../images/footer/payment-systems/qiwi.png);
+}
+
+.__footer .payment-systems a.yandex {
+    width: 185px;
+    height: 49px;
+    left: 230px;
+    position: relative;
+    margin-top: -15px;
+    background-repeat: no-repeat;
+    background-image: url(../images/footer/payment-systems/yandex.png);
+}
+
+/* END FOOTER */
