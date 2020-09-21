@@ -118,7 +118,7 @@ $('.action-edit').on("click",function(e){
 	  	var tournament = JSON.parse(data);
 	  	var prize = JSON.parse(tournament.prize);
 
-	  	var date = new Date(tournament.date*1000);
+	  	var date = new Date(tournament.data*1000);
 	  	var month = date.getMonth();
 	  	switch (month) {
 	  		case 0:
@@ -160,7 +160,9 @@ $('.action-edit').on("click",function(e){
 	  	}
 
 	  	$('#tour-id').val(tournament.id);
-	  	$('#tour-name').val(tournament.name);
+		$('#tour-name').val(tournament.name);
+		$('#tour-img').val(tournament.img);
+		$('#tour-mode').val(tournament.mode);
 	    $('#tour-game').attr('selected', 'false');
 	    $('#tour-game option[value="'+tournament.game+'"]').attr('selected', 'selected');
 	    $('#tour-players').val(tournament.players);
