@@ -45,7 +45,7 @@
             <!-- END HEADER -->
             <?php if (isset($_SESSION['user'])) : ?>
             <a href="/buy_tickets" class="tickets_balance">
-                <img src="../../img/ticket.png" alt=""><span><?php echo $user->tickets; ?></span>
+                <img src="../img/ticket.png" alt=""><span><?php echo $user->tickets; ?></span>
             </a>
             <?php endif; ?>
         
@@ -54,6 +54,7 @@
                 <h2>Билеты</h2>
                 <div class="items_tickets">
                     <div class="item_ticket add_balance" data-tickets="2">
+                        <img class="img_ticket" src="../img/tickets.png" alt="tickets">
                         <div class="info_tickets">
                             <p>2 билета</p>
                             <span>Купить за 99 руб.</span>
@@ -61,6 +62,7 @@
                         </div>
                     </div>
                     <div class="item_ticket add_balance" data-tickets="8">
+                        <img class="img_ticket" src="../img/tickets.png" alt="tickets">
                         <div class="info_tickets">
                             <p>8 билетов</p>
                             <span>Купить за 300 руб.</span>
@@ -68,6 +70,7 @@
                         </div>
                     </div>
                     <div class="item_ticket add_balance" data-tickets="15">
+                        <img class="img_ticket" src="../img/tickets.png" alt="tickets">
                         <div class="info_tickets">
                             <p>15 билетов</p>
                             <span>Купить за 500 руб.</span>
@@ -117,11 +120,13 @@
                 <input type="hidden" value="<?php echo $user->id ?>" id="uid">
                 <div class="items_tickets">
                     <div class="item_ticket">
+                        <img class="img_ticket" src="../img/RoboKassa.png" alt="robokassa">
                         <div class="info_tickets">
                             <p>RoboKassa</p>
                         </div>
                     </div>
                     <div class="item_ticket" id="buy_balance">
+                        <img class="img_ticket" src="../img/ruble.png" alt="balance">
                         <div class="info_tickets">
                             <p>С баланса</p>
                             <span>На балансе <?php echo $user->balance; ?> руб</span>

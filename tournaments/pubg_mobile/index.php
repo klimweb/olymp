@@ -184,7 +184,7 @@
                                 <span class='date'><?php echo $date['mday'].' '.$date['month'].', AT '; ?> <span class='time'><?php echo $date['hours'].':'.$date['minutes']; ?></span></span>
                                 <span class='name'><?php echo $item['name']; ?></span>
                                 <span class='game-description'>Tournament organizer Spartans</span>
-                                <p><input type='button' value='Participate for 1 ticket'></p>
+                                <p><input class="participate_tour" data-tour="<?php echo $item['id'] ?>" type='button' value='Participate for 1 ticket'></p>
                             </div>
                             <div class='area-2'>
                                 <span class='price'><?php echo $prize ?>&nbsp;<span class='payment_type'>руб.</span></span><br>
@@ -309,6 +309,7 @@
                 <h2>Купить билеты для участия</h2>
                 <div class="items_tickets">
                     <div class="item_ticket">
+                        <img class="img_ticket" src="../../img/tickets.png" alt="tickets">
                         <div class="info_tickets">
                             <p>2 билета</p>
                             <span>Купить за 99 руб.</span>
@@ -316,6 +317,7 @@
                         </div>
                     </div>
                     <div class="item_ticket">
+                        <img class="img_ticket" src="../../img/tickets.png" alt="tickets">
                         <div class="info_tickets">
                             <p>8 билетов</p>
                             <span>Купить за 300 руб.</span>
@@ -323,6 +325,7 @@
                         </div>
                     </div>
                     <div class="item_ticket">
+                        <img class="img_ticket" src="../../img/tickets.png" alt="tickets">
                         <div class="info_tickets">
                             <p>15 билетов</p>
                             <span>Купить за 500 руб.</span>
