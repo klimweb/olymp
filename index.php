@@ -118,6 +118,57 @@
             </div>
             <!-- END PRO PLAYERS -->
             <div class='clear'></div>
+
+            <!-- TOP PLAYERS-->
+
+            <!-- END TOP PLAYERS-->
+            <div class="top_players">
+                <h2>Топ 10 игроков</h2>
+                <div class="variants_top">
+                    <a data-top="score">По очкам</a>
+                    <a class="active" data-top="balance">По балансу</a>
+                </div>
+                <div id="top_users">
+                    <div data-top="score" style="display: none">
+                        <?php
+                        $top_score=R::getAll('SELECT * FROM users WHERE score ORDER BY id DESC LIMIT 10');
+                        $i = 0;
+                        foreach ($top_score as $item) :
+                            $i++;
+                            ?>
+
+                            <div class="user_top">
+                                <div>
+                                    <span class="mesto"><?php echo $i ?>.</span> Player_<?php echo $item['player_id'] ?>
+                                </div>
+                                <div>
+                                    <?php echo $item['score'] ?> очков
+                                </div>
+                            </div>
+
+                        <?php endforeach; ?>
+                    </div>
+                    <div data-top="balance">
+                        <?php
+                        $top_balance=R::getAll('SELECT * FROM users WHERE balance ORDER BY id DESC LIMIT 10');
+                        $i = 0;
+                        foreach ($top_balance as $item) :
+                            $i++;
+                        ?>
+
+                            <div class="user_top">
+                                <div>
+                                    <span class="mesto"><?php echo $i ?>.</span> Player_<?php echo $item['player_id'] ?>
+                                </div>
+                                <div>
+                                    <?php echo $item['balance'] ?> руб
+                                </div>
+                            </div>
+
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </div>
             <!-- BEGIN FOOTER -->
             <div class='footer'>
                 <!-- BEGIN INNER FOOTER -->
@@ -157,5 +208,13 @@
             <!-- END FOOTER -->
         </div>
         <!-- END WRAPPER -->
+        <script>
+            $('[data-top]').click(function () {
+                $('[data-top]').removeClass('active');
+                $(this).addClass('active');
+                $('#top_users [data-top]').hide();
+                $('#top_users [data-top="'+$(this).attr('data-top')+'"]').show();
+            });
+        </script>
     </body>
 </html>

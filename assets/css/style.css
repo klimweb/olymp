@@ -112,6 +112,64 @@ html, body {
     border-top: 1px solid #0054FF;
 }
 
+.top_players {
+    max-width: 800px;
+    margin: auto;
+}
+.top_players h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 900;
+    margin-bottom: 40px;
+}
+.top_players .variants_top {
+    display: flex;
+    justify-content: center;
+}
+.top_players .variants_top a {
+    font-size: 18px;
+    background: #ec5e54;
+    padding: 10px 25px;
+    border-radius: 7px;
+    margin: 0 10px;
+    cursor: pointer;
+    opacity: 0.4;
+    transition: .2s;
+}
+.top_players .variants_top a.active, .top_players .variants_top a:hover {
+    opacity: 1;
+}
+.top_players #top_users {
+    margin-top: 30px;
+}
+.top_players .user_top {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.top_players .user_top div {
+    margin: 0 30px;
+    text-align: left;
+    width: 40%;
+}
+.top_players .user_top div:first-child {
+    text-align: right;
+}
+.top_players .user_top {
+    font-size: 20px;
+}
+[data-top] .user_top:first-child {
+    font-weight: 900;
+}
+[data-top] .user_top:first-child .mesto {
+    font-size: 24px;
+    font-weight: 900;
+}
+[data-top] .user_top .mesto {
+    font-size: 20px;
+    font-weight: 600;
+}
+
 * {
     margin: 0;
     padding: 0;
