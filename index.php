@@ -131,7 +131,7 @@
                 <div id="top_users">
                     <div data-top="score" style="display: none">
                         <?php
-                        $top_score=R::getAll('SELECT * FROM users WHERE score ORDER BY id DESC LIMIT 10');
+                        $top_score=R::getAll('SELECT * FROM users WHERE score ORDER BY score DESC LIMIT 10');
                         $i = 0;
                         foreach ($top_score as $item) :
                             $i++;
@@ -150,7 +150,7 @@
                     </div>
                     <div data-top="balance">
                         <?php
-                        $top_balance=R::getAll('SELECT * FROM users WHERE balance ORDER BY id DESC LIMIT 10');
+                        $top_balance=R::getAll('SELECT * FROM users WHERE balance ORDER BY balance DESC LIMIT 10');
                         $i = 0;
                         foreach ($top_balance as $item) :
                             $i++;
