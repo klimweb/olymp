@@ -23,6 +23,7 @@
 
         <!-- BEGIN CONNECTION STYLESHEETS -->
         <link rel='stylesheet' type='text/css' href='assets/css/reset.css'>
+        <link rel='stylesheet' type='text/css' href='../assets/css/style.css'>
         <link rel='stylesheet' type='text/css' href='assets/css/style.css'>
         <link rel='stylesheet' type='text/css' href='assets/css/media-queries.css'>
         <link rel='stylesheet' type='text/css' href='assets/css/slick.css'>

@@ -1,5 +1,6 @@
 <?php include 'db.php'; ?>
 <!-- BEGIN NAVIGATION -->
+    <script src='../assets/js/jquery.toShowHide.js'></script>
                     <div class='navigation'>
                         <ul>
                             <li><a target='_self' href='/'  class='active left-border' >Tournaments</a>
@@ -92,7 +93,8 @@
                     <!-- BEGIN USER ACCOUNT -->
                     <div class='user-account logged'>
                         <div class='notification'>
-                            <a href='/account/notification/'></a>
+<!--                            <a href='/account/notification/'></a>-->
+                            <a href="#"></a>
                         </div>
 
                         <div class='sign-in log-in signed'>
@@ -100,6 +102,43 @@
                             <?php echo $user->balance; ?> руб.</span></a>
                             
                         </div>
+
+                        <div class="notifications">
+                            <div class="items">
+                                <?php
+                                $notifications = R::getAll('SELECT * FROM notifications WHERE uid = ? ORDER BY id DESC LIMIT 10', array($user->id));
+                                foreach ($notifications as $notification) :
+                                ?>
+                                <a class="item">
+                                    <?php echo $notification['txt']; ?>
+                                </a>
+                                <?php
+                                endforeach;
+                                if (count($notifications) < 1) :
+                                ?>
+                                <p style="text-align: center;margin-top: 20px;font-size: 16px;opacity: 0.5;">У вас пока нет уведомлений</p>
+                                <?php
+                                endif;
+                                ?>
+                            </div>
+                            <a href="/account/notifications/" class="view_all">Посмотреть все уведомления</a>
+                        </div>
                     </div>
                     <!-- END USER ACCOUNT -->
+    <script>
+        $('.user-account').toShowHide({
+            method: 'click',
+            button: '.notification a',
+            box: '.notifications',
+            effect: 'fade',
+            anim_speed: 100,
+            delay: 0,
+            onBefore: function(e) {
+                
+            },
+            onAfter: function(e) {
+
+            }
+        });
+    </script>
                     <?php endif; ?>
