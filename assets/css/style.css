@@ -236,9 +236,9 @@ html, body {
     border-bottom: 1px solid rgba(255,255,255,.06);
     text-align: center;
 }
-.notifications .items .item:last-child {
-    border-bottom: 0px;
-}
+/*.notifications .items .item:last-child {*/
+/*    border-bottom: 0px;*/
+/*}*/
 .notifications .view_all {
     position: absolute;
     bottom: 0;

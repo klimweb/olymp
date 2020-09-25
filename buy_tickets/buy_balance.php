@@ -32,6 +32,8 @@
 		$user->balance -= $price;
 		R::store($user);
 
+        notification($user->id, "Вы купили ".$_GET['tickets']." билет(ов)");
+
 		echo "Билеты куплены!";
 
 	} else {
