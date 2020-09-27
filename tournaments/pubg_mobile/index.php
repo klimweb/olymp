@@ -177,6 +177,9 @@
                             $prize += $summ;
                         }
                         $date = getdate($item['data']);
+                        $participate = R::getAll('SELECT * FROM toursbuy WHERE tid = ? AND uid = ?', array($item['id'], $user->id));
+                        $players = R::getAll('SELECT * FROM toursbuy WHERE tid = ?', array($item['id']));
+                        $players = count($players);
                         ?>
                         <div class='game game-type'>
                             <div class='area-1'>
@@ -184,14 +187,26 @@
                                 <span class='date'><?php echo $date['mday'].' '.$date['month'].', AT '; ?> <span class='time'><?php echo $date['hours'].':'.$date['minutes']; ?></span></span>
                                 <span class='name'><?php echo $item['name']; ?></span>
                                 <span class='game-description'>Tournament organizer Spartans</span>
-                                <p><input class="participate_tour" data-tour="<?php echo $item['id'] ?>" type='button' value='Participate for 1 ticket'></p>
+                                <?php if ($players < $item['players']) : ?>
+                                    <?php if ($participate) : ?>
+                                        <p><input class="" data-id="<?php echo $item['id'] ?>" data-tour="<?php echo $item['id'] ?>" type='button' value='Получить id и пароль'></p>
+                                    <?php else: ?>
+                                        <p><input class="buy_for_tickets participate_tour" data-id="<?php echo $item['id'] ?>" data-tour="<?php echo $item['id'] ?>" type='button' value='Participate for 1 ticket'></p>
+                                    <?php endif; ?>
+                                <?php else: ?>
+                                    <?php if ($participate) : ?>
+                                        <p><input class="" data-id="<?php echo $item['id'] ?>" data-tour="<?php echo $item['id'] ?>" type='button' value='Получить id и пароль'></p>
+                                    <?php else: ?>
+                                        <p><input style="opacity: 0.3" data-id="<?php echo $item['id'] ?>" data-tour="<?php echo $item['id'] ?>" type='button' value='Все места заняты'></p>
+                                    <?php endif; ?>
+                                <?php endif; ?>
                             </div>
                             <div class='area-2'>
                                 <span class='price'><?php echo $prize ?>&nbsp;<span class='payment_type'>руб.</span></span><br>
                                 <span class='any-description'>Prize pool</span>
                             </div>
                             <div class='area-3'>
-                                <span class='price'>0&nbsp;&frasl;<?php echo $item['players'] ?>&nbsp;Players</span><br>
+                                <span class='price'><?php echo $players; ?>&nbsp;&frasl;<?php echo $item['players'] ?>&nbsp;Players</span><br>
                                 <span class='any-description'></span>
                             </div>
                             <div class='area-4'>
@@ -240,7 +255,7 @@
                     <!-- BEGIN GAMES -->
                     <div class='games'>
                         <?php
-                        $items = R::getAll('SELECT * FROM tournaments WHERE data < :date_24hour and data > :time_only ORDER BY data ASC', [':date_24hour' => time()+86400, 'time_only' => time()]);
+                        $items = R::getAll('SELECT * FROM tournaments WHERE data < :date_24hour and data > :time_only ORDER BY data ASC', [':date_24hour' => time()+86400, 'time_only' => time()+3600]);
                         foreach ($items as $item) :
                         $item['prize'] = json_decode($item['prize']);
                         $prize = 0;
@@ -248,6 +263,9 @@
                             $prize += $summ;
                         }
                         $date = getdate($item['data']);
+                        $participate = R::getAll('SELECT * FROM toursbuy WHERE tid = ? AND uid = ?', array($item['id'], $user->id));
+                        $players = R::getAll('SELECT * FROM toursbuy WHERE tid = ?', array($item['id']));
+                        $players = count($players);
                         ?>
                         <div class='game game-type'>
                             <div class='area-1'>
@@ -255,14 +273,26 @@
                                 <span class='date'><?php echo $date['mday'].' '.$date['month'].', AT '; ?> <span class='time'><?php echo $date['hours'].':'.$date['minutes']; ?></span></span>
                                 <span class='name'><?php echo $item['name']; ?></span>
                                 <span class='game-description'>Tournament organizer Spartans</span>
-                                <p><input type='button' value='Participate for 1 ticket' class="buy_for_tickets"></p>
+                                <?php if ($players < $item['players']) : ?>
+                                    <?php if ($participate) : ?>
+                                        <p><input class="" data-id="<?php echo $item['id'] ?>" data-tour="<?php echo $item['id'] ?>" type='button' value='Получить id и пароль'></p>
+                                    <?php else: ?>
+                                        <p><input class="buy_for_tickets participate_tour" data-id="<?php echo $item['id'] ?>" data-tour="<?php echo $item['id'] ?>" type='button' value='Participate for 1 ticket'></p>
+                                    <?php endif; ?>
+                                <?php else: ?>
+                                    <?php if ($participate) : ?>
+                                        <p><input class="" data-id="<?php echo $item['id'] ?>" data-tour="<?php echo $item['id'] ?>" type='button' value='Получить id и пароль'></p>
+                                    <?php else: ?>
+                                        <p><input style="opacity: 0.3" data-id="<?php echo $item['id'] ?>" data-tour="<?php echo $item['id'] ?>" type='button' value='Все места заняты'></p>
+                                    <?php endif; ?>
+                                <?php endif; ?>
                             </div>
                             <div class='area-2'>
                                 <span class='price'><?php echo $prize ?>&nbsp;<span class='payment_type'>руб.</span></span><br>
                                 <span class='any-description'>Prize pool</span>
                             </div>
                             <div class='area-3'>
-                                <span class='price'>0&nbsp;&frasl;<?php echo $item['players'] ?>&nbsp;Players</span><br>
+                                <span class='price'><?php echo $players; ?>&nbsp;&frasl;<?php echo $item['players'] ?>&nbsp;Players</span><br>
                                 <span class='any-description'></span>
                             </div>
                             <div class='area-4'>
@@ -305,6 +335,7 @@
 
             <?php endif; ?>
 
+            <input type="hidden" id="buy_tour_id" value="0">
             <div id="buy_tournament_tickets" style="display: none">
                 <h2>Купить билеты для участия</h2>
                 <div class="items_tickets">

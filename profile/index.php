@@ -54,7 +54,7 @@
             <!-- END HEADER -->
             
             <?php
-            $my_tours = R::getAll('SELECT * FROM users_tournaments WHERE uid = :uid ORDER BY id ASC', ['uid' => $user->id]);
+            $my_tours = R::getAll('SELECT * FROM toursbuy WHERE uid = :uid ORDER BY id ASC', ['uid' => $user->id]);
             if ($my_tours) :
             ?>
             <!-- BEGIN NEXT HOUR BLOCK -->
@@ -67,7 +67,7 @@
                     <!-- BEGIN GAMES -->
                     <div class='games'>
                         <?php
-                        $items = R::getAll('SELECT * FROM users_tournaments WHERE uid = :uid ORDER BY id ASC', ['uid' => $user->id]);
+                        $items = R::getAll('SELECT * FROM toursbuy WHERE uid = :uid ORDER BY id ASC', ['uid' => $user->id]);
                         $next_hour = 0;
                         foreach ($items as $item) :
 
@@ -82,6 +82,8 @@
                             $prize += $summ;
                         }
                         $date = getdate($tournament->data);
+                        $players = R::getAll('SELECT * FROM toursbuy WHERE tid = ?', array($tournament->id));
+                        $players = count($players);
                         ?>
                         <div class='game game-type'>
                             <div class='area-1'>
@@ -89,14 +91,14 @@
                                 <span class='date'><?php echo $date['mday'].' '.$date['month'].', AT '; ?> <span class='time'><?php echo $date['hours'].':'.$date['minutes']; ?></span></span>
                                 <span class='name'><?php echo $tournament->name; ?></span>
                                 <span class='game-description'>Tournament organizer Spartans</span>
-                                <p><input type='button' value='Посмотреть id и пароль'></p>
+                                <p><input type='button' value='Получить id и пароль'></p>
                             </div>
                             <div class='area-2'>
                                 <span class='price'><?php echo $prize ?>&nbsp;<span class='payment_type'>руб.</span></span><br>
                                 <span class='any-description'>Prize pool</span>
                             </div>
                             <div class='area-3'>
-                                <span class='price'>0&nbsp;&frasl;<?php echo $tournament->players ?>&nbsp;Players</span><br>
+                                <span class='price'><?php echo $players; ?>&nbsp;&frasl;<?php echo $tournament->players ?>&nbsp;Players</span><br>
                                 <span class='any-description'></span>
                             </div>
                             <div class='area-4'>
@@ -127,7 +129,7 @@
 
                         <?php if ($next_hour == 0) : ?>
                             <div style="text-align: center;">
-                                <h2 style="font-size: 16px; opacity: 0.7">У вас нет турниров в ближайший час</h2>
+                                <h2 style="font-size: 16px; opacity: 0.7">Больше нет турниров в ближайший час</h2>
                             </div>
                         <?php endif; ?>
                     </div>
@@ -137,7 +139,7 @@
             </div>
             <!-- END NEXT HOUR BLOCK -->
             <?php //endif; ?>
-      
+
             <!-- BEGIN TOMORROW BLOCK -->
             <div class='next-hour tomorrow'>
                 <!-- BEGIN INNER TOMORROW BLOCK -->
@@ -147,13 +149,13 @@
                     <!-- BEGIN GAMES -->
                     <div class='games'>
                         <?php
-                        $items = R::getAll('SELECT * FROM users_tournaments WHERE uid = :uid ORDER BY id ASC', ['uid' => $user->id]);
+                        $items = R::getAll('SELECT * FROM toursbuy WHERE uid = :uid ORDER BY id ASC', ['uid' => $user->id]);
                         $tommorow = 0;
                         foreach ($items as $item) :
 
                         $tournament = R::findOne('tournaments', 'id = ?', array($item['tid']));
 
-                        if ($tournament->data < time()+86400 && $tournament->data > time()) :
+                        if ($tournament->data < time()+86400 && $tournament->data > time() + 3600) :
                         $tommorow++;
 
                         $tournament->prize = json_decode($tournament->prize);
@@ -162,6 +164,8 @@
                             $prize += $summ;
                         }
                         $date = getdate($tournament->data);
+                        $players = R::getAll('SELECT * FROM toursbuy WHERE tid = ?', array($tournament->id));
+                        $players = count($players);
                         ?>
                         <div class='game game-type'>
                             <div class='area-1'>
@@ -169,14 +173,14 @@
                                 <span class='date'><?php echo $date['mday'].' '.$date['month'].', AT '; ?> <span class='time'><?php echo $date['hours'].':'.$date['minutes']; ?></span></span>
                                 <span class='name'><?php echo $tournament->name; ?></span>
                                 <span class='game-description'>Tournament organizer Spartans</span>
-                                <p><input type='button' value='Посмотреть id и пароль'></p>
+                                <p><input type='button' value='Получить id и пароль'></p>
                             </div>
                             <div class='area-2'>
                                 <span class='price'><?php echo $prize ?>&nbsp;<span class='payment_type'>руб.</span></span><br>
                                 <span class='any-description'>Prize pool</span>
                             </div>
                             <div class='area-3'>
-                                <span class='price'>0&nbsp;&frasl;<?php echo $tournament->players ?>&nbsp;Players</span><br>
+                                <span class='price'><?php echo $players; ?>&nbsp;&frasl;<?php echo $tournament->players ?>&nbsp;Players</span><br>
                                 <span class='any-description'></span>
                             </div>
                             <div class='area-4'>
@@ -207,7 +211,7 @@
 
                         <?php if ($tommorow == 0) : ?>
                             <div style="text-align: center;">
-                                <h2 style="font-size: 16px; opacity: 0.7">У вас нет турниров на сегодня</h2>
+                                <h2 style="font-size: 16px; opacity: 0.7">Больше нет турниров сегодня</h2>
                             </div>
                         <?php endif; ?>
 

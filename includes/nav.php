@@ -1,6 +1,5 @@
 <?php include 'db.php'; ?>
 <!-- BEGIN NAVIGATION -->
-    <script src='../assets/js/jquery.toShowHide.js'></script>
                     <div class='navigation'>
                         <ul>
                             <li><a target='_self' href='/'  class='active left-border' >Tournaments</a>
@@ -125,6 +124,8 @@
                         </div>
                     </div>
                     <!-- END USER ACCOUNT -->
+
+    <script src='/assets/js/jquery.toShowHide.js'></script>
     <script>
         $('.user-account').toShowHide({
             method: 'click',
