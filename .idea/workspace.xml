@@ -21,9 +21,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/dmitry" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Новая папка (2)" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\innok\Documents\GitHub\olymp\account\notifications" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -36,7 +41,8 @@
       <workItem from="1600697463912" duration="571000" />
       <workItem from="1600698054878" duration="6052000" />
       <workItem from="1600723880896" duration="15350000" />
-      <workItem from="1601046904311" duration="4391000" />
+      <workItem from="1601046904311" duration="9220000" />
+      <workItem from="1601147016639" duration="3407000" />
     </task>
     <servers />
   </component>
@@ -44,13 +50,14 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2340" y="246" key="FileChooserDialogImpl" timestamp="1600941592639">
-      <screen x="1920" y="0" width="1280" height="984" />
-    </state>
-    <state x="2340" y="246" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1280.984@1920.0.1280.984" timestamp="1600941592639" />
-    <state x="540" y="150" key="SettingsEditor" timestamp="1600700868408">
+    <state x="630" y="260" key="FileChooserDialogImpl" timestamp="1601118672327">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="540" y="150" key="SettingsEditor/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1600700868408" />
+    <state x="630" y="260" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1601118672327" />
+    <state x="2340" y="246" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1280.984@1920.0.1280.984" timestamp="1600941592639" />
+    <state x="755" y="102" key="SettingsEditor" timestamp="1601146956624">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="755" y="102" key="SettingsEditor/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1601146956624" />
   </component>
 </project>

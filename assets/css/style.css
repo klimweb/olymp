@@ -189,9 +189,11 @@ html, body {
     border-radius: 10px;
     border-bottom: 1px solid white;
     z-index: 9999;
+    padding-bottom: 22px;
 }
 .notifications .items {
     min-height: 110px;
+    max-height: 243px;
     overflow-y: scroll;
     position: relative;
     margin-bottom: 30px;
