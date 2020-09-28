@@ -90,10 +90,18 @@
                     <!-- END USER ACCOUNT -->
                     <?php else : ?>
                     <!-- BEGIN USER ACCOUNT -->
+                    <?php
+                    $notif_c = R::getAll('SELECT * FROM notifications WHERE uid = ? AND view = 0', array($user->id));
+                    $notif_c = count($notif_c);
+                    ?>
                     <div class='user-account logged'>
-                        <div class='notification'>
+                        <div class='notification' <?php if ($notif_c < 1): ?> style="opacity: 0.5" <?php endif; ?>>
 <!--                            <a href='/account/notification/'></a>-->
-                            <a href="#"></a>
+                            <a href="#">
+                                <?php if ($notif_c > 0): ?>
+                                    <span><?php echo $notif_c; ?></span>
+                                <?php endif; ?>
+                            </a>
                         </div>
 
                         <div class='sign-in log-in signed'>
@@ -140,6 +148,17 @@
             onAfter: function(e) {
 
             }
+        });
+        $('.notification a').click(function () {
+            $.ajax({
+                type: "POST",
+                url: '/includes/view_notifs.php',
+                data: {},
+                success: function(data) {
+                    $('.notification a span').fadeOut();
+                    $('.notification').css('opacity', '0.5');
+                },
+            });
         });
     </script>
                     <?php endif; ?>
