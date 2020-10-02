@@ -189,13 +189,13 @@
                                 <span class='game-description'>Tournament organizer Spartans</span>
                                 <?php if ($players < $item['players']) : ?>
                                     <?php if ($participate) : ?>
-                                        <p><input class="" data-id="<?php echo $item['id'] ?>" data-tour="<?php echo $item['id'] ?>" type='button' value='Получить id и пароль'></p>
+                                        <p><input class="get_idpass" data-id="<?php echo $item['id'] ?>" data-tour="<?php echo $item['id'] ?>" type='button' value='Получить id и пароль'></p>
                                     <?php else: ?>
                                         <p><input class="buy_for_tickets participate_tour" data-id="<?php echo $item['id'] ?>" data-tour="<?php echo $item['id'] ?>" type='button' value='Participate for 1 ticket'></p>
                                     <?php endif; ?>
                                 <?php else: ?>
                                     <?php if ($participate) : ?>
-                                        <p><input class="" data-id="<?php echo $item['id'] ?>" data-tour="<?php echo $item['id'] ?>" type='button' value='Получить id и пароль'></p>
+                                        <p><input class="get_idpass" data-id="<?php echo $item['id'] ?>" data-tour="<?php echo $item['id'] ?>" type='button' value='Получить id и пароль'></p>
                                     <?php else: ?>
                                         <p><input style="opacity: 0.3" data-id="<?php echo $item['id'] ?>" data-tour="<?php echo $item['id'] ?>" type='button' value='Все места заняты'></p>
                                     <?php endif; ?>
@@ -275,13 +275,13 @@
                                 <span class='game-description'>Tournament organizer Spartans</span>
                                 <?php if ($players < $item['players']) : ?>
                                     <?php if ($participate) : ?>
-                                        <p><input class="" data-id="<?php echo $item['id'] ?>" data-tour="<?php echo $item['id'] ?>" type='button' value='Получить id и пароль'></p>
+                                        <p><input class="get_idpass" data-id="<?php echo $item['id'] ?>" data-tour="<?php echo $item['id'] ?>" type='button' value='Получить id и пароль'></p>
                                     <?php else: ?>
                                         <p><input class="buy_for_tickets participate_tour" data-id="<?php echo $item['id'] ?>" data-tour="<?php echo $item['id'] ?>" type='button' value='Participate for 1 ticket'></p>
                                     <?php endif; ?>
                                 <?php else: ?>
                                     <?php if ($participate) : ?>
-                                        <p><input class="" data-id="<?php echo $item['id'] ?>" data-tour="<?php echo $item['id'] ?>" type='button' value='Получить id и пароль'></p>
+                                        <p><input class="get_idpass" data-id="<?php echo $item['id'] ?>" data-tour="<?php echo $item['id'] ?>" type='button' value='Получить id и пароль'></p>
                                     <?php else: ?>
                                         <p><input style="opacity: 0.3" data-id="<?php echo $item['id'] ?>" data-tour="<?php echo $item['id'] ?>" type='button' value='Все места заняты'></p>
                                     <?php endif; ?>
@@ -396,6 +396,8 @@
             <!-- END FOOTER -->
         </div>
         <!-- END WRAPPER -->
+
+        <input type="hidden" id="get_idpass_tourid">
 
         <script>
         $('.game').hover(function () {

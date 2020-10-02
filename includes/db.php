@@ -15,12 +15,12 @@ if (isset($_SESSION['user'])) {
 	$user = R::findOne('users', 'id = ?', array($_SESSION['user']->id));
 	//printf($user);
 	//echo $_SESSION['user']->id;
+}
 
-    function notification($uid, $txt) {
-        $notification = R::dispense('notifications');
-        $notification->uid = $uid;
-        $notification->txt = $txt;
-        R::store($notification);
-    }
-
+// Уведомления
+function notification($uid, $txt) {
+    $notification = R::dispense('notifications');
+    $notification->uid = $uid;
+    $notification->txt = $txt;
+    R::store($notification);
 }

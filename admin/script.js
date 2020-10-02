@@ -224,3 +224,35 @@ $('.user-edit').on("click",function(e){
 	$(".add-new-data").addClass("show");
 	$(".overlay-bg").addClass("show");
   });
+
+
+$('.give_id_pass').click(function () {
+	$('#player_id_getPass span').text($('tr[data-id="'+$(this).attr('data-id')+'"]').find('.player_tour').text());
+	$('#date_getPass span').text($('tr[data-id="'+$(this).attr('data-id')+'"]').find('.date_tour').text());
+	$('#nametour_getPass span').text($('tr[data-id="'+$(this).attr('data-id')+'"]').find('.name_tour').text());
+	$('#tourticket_id').val($(this).attr('data-id'));
+	$('#id_touruser').val('');
+	$('#pass_touruser').val('');
+});
+
+$('#send_idpass').click(function () {
+	if (confirm('Вы проверили данные?')) {
+		$.ajax({
+			type: "POST",
+			url: 'actions.php',
+			data: {
+				"action": "give_idpass",
+				"id": $('#tourticket_id').val(),
+				"give_id": $('#id_touruser').val(),
+				"give_pass": $('#pass_touruser').val()
+			},
+			success: function(data) {
+				if (data == 'success') {
+					alert('Данные отправлены');
+					location.reload();
+				}
+			},
+			//dataType: dataType
+		});
+	}
+});

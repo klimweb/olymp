@@ -18,6 +18,8 @@
                         <ul class="dropdown-menu">
                             <li data-menu=""><a class="dropdown-item" href="/admin/" data-toggle="dropdown" data-i18n="Chat"><i class="feather icon-list"></i>Список турниров</a>
                             </li>
+                            <li data-menu=""><a class="dropdown-item" href="/admin/users_tours.php" data-toggle="dropdown" data-i18n="Chat"><i class="feather icon-list"></i>Выдача id и паролей</a>
+                            </li>
                         </ul>
                     </li>
                     <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown"><i class="feather icon-user"></i><span data-i18n="Apps">Users</span></a>

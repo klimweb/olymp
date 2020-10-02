@@ -76,6 +76,24 @@ if ($_POST['action'] == 'update_user') {
 // Редактирование пользователя (конец)
 
 
+// Выдача id и пароля игроку
+if ($_POST['action'] == 'give_idpass') {
+
+    // Update
+    $give_tour = R::load('toursbuy', $_POST['id']);
+    $give_tour->accid 	= $_POST['give_id'];
+    $give_tour->accpass  = $_POST['give_pass'];
+    R::store($give_tour);
+
+    // Отправка уведомления
+    $user_tour = R::findOne('toursbuy', $_POST['id']);
+    notification($user_tour->uid, "Вам доступны данные для участия в <a href=\"/profile#tour$user_tour->tid\">турнире</a>");
+
+    echo 'success';
+}
+// Выдача id и пароля игроку (конец)
+
+
 // Получение информации о турнире
 if ($_POST['action'] == 'get_info_tournament') {
 	$tournament = R::findOne('tournaments', 'id = ?', array($_POST['id']));

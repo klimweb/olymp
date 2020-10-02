@@ -21,8 +21,8 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Новая папка (2)" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../OSPanel/domains/localhost" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -42,7 +42,10 @@
       <workItem from="1600698054878" duration="6052000" />
       <workItem from="1600723880896" duration="15350000" />
       <workItem from="1601046904311" duration="9220000" />
-      <workItem from="1601147016639" duration="15258000" />
+      <workItem from="1601147016639" duration="16470000" />
+      <workItem from="1601375401380" duration="3227000" />
+      <workItem from="1601588388438" duration="3885000" />
+      <workItem from="1601593414165" duration="10673000" />
     </task>
     <servers />
   </component>
@@ -50,14 +53,22 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="630" y="260" key="FileChooserDialogImpl" timestamp="1601118672327">
+    <state x="640" y="255" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1601592544034">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="630" y="260" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1601118672327" />
-    <state x="2340" y="246" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1280.984@1920.0.1280.984" timestamp="1600941592639" />
-    <state x="755" y="102" key="SettingsEditor" timestamp="1601146956624">
+    <state x="640" y="255" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1601592544034" />
+    <state x="630" y="260" key="FileChooserDialogImpl" timestamp="1601593254257">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="755" y="102" key="SettingsEditor/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1601146956624" />
+    <state x="630" y="260" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1601593254257" />
+    <state x="2340" y="246" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1280.984@1920.0.1280.984" timestamp="1601406054102" />
+    <state x="1969" y="244" width="998" height="708" key="SettingsEditor" timestamp="1601648374501">
+      <screen x="1920" y="0" width="1280" height="984" />
+    </state>
+    <state x="1969" y="244" width="998" height="708" key="SettingsEditor/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1601648374501" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1601649860781">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1601649860781" />
   </component>
 </project>

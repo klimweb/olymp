@@ -44,9 +44,9 @@
         $notifications = R::getAll('SELECT * FROM notifications WHERE uid = ? ORDER BY id DESC', array($user->id));
         foreach ($notifications as $notification) :
             ?>
-            <a style="display: block;padding: 7px 0px;width: 100%;text-align:center;font-size: 17px;">
+            <div class="item" style="display: block;padding: 7px 0px;width: 100%;text-align:center;font-size: 17px;">
                 <?php echo $notification['txt']; ?>
-            </a>
+            </div>
         <?php
         endforeach;
         if (count($notifications) < 1) :
@@ -56,6 +56,14 @@
         endif;
         ?>
     </div>
+
+    <style>
+        .item a {
+            color: #fff;
+            text-decoration: underline;
+            font-weight: 700;
+        }
+    </style>
 
     <!-- BEGIN FOOTER -->
     <div class='footer'>

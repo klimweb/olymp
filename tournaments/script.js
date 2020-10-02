@@ -25,3 +25,19 @@ $('.buy_for_tickets').click(function() {
 		});
 	}
 });
+
+$('.get_idpass').click(function () {
+	$('#get_idpass_tourid').val($(this).attr('data-id'));
+	$.ajax({
+		type: "POST",
+		url: '../actions.php',
+		data: {
+			"action": 'get_idpass',
+			"id": $('#get_idpass_tourid').val()
+		},
+		success: function(data) {
+			$.fancybox.open(data);
+		},
+		//dataType: dataType
+	});
+});

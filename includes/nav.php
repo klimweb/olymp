@@ -116,9 +116,9 @@
                                 $notifications = R::getAll('SELECT * FROM notifications WHERE uid = ? ORDER BY id DESC LIMIT 10', array($user->id));
                                 foreach ($notifications as $notification) :
                                 ?>
-                                <a class="item">
+                                <div class="item">
                                     <?php echo $notification['txt']; ?>
-                                </a>
+                                </div>
                                 <?php
                                 endforeach;
                                 if (count($notifications) < 1) :
