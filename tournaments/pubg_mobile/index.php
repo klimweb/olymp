@@ -336,35 +336,8 @@
             <?php endif; ?>
 
             <input type="hidden" id="buy_tour_id" value="0">
-            <div id="buy_tournament_tickets" style="display: none">
-                <h2>Купить билеты для участия</h2>
-                <div class="items_tickets">
-                    <div class="item_ticket">
-                        <img class="img_ticket" src="../../img/tickets.png" alt="tickets">
-                        <div class="info_tickets">
-                            <p>2 билета</p>
-                            <span>Купить за 99 руб.</span>
-                            <span class="price_ticket">1 БИЛЕТ = 49.50 руб</span>
-                        </div>
-                    </div>
-                    <div class="item_ticket">
-                        <img class="img_ticket" src="../../img/tickets.png" alt="tickets">
-                        <div class="info_tickets">
-                            <p>8 билетов</p>
-                            <span>Купить за 300 руб.</span>
-                            <span class="price_ticket">1 БИЛЕТ = 37.50 руб</span>
-                        </div>
-                    </div>
-                    <div class="item_ticket">
-                        <img class="img_ticket" src="../../img/tickets.png" alt="tickets">
-                        <div class="info_tickets">
-                            <p>15 билетов</p>
-                            <span>Купить за 500 руб.</span>
-                            <span class="price_ticket">1 БИЛЕТ = 33.33 руб</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+            <?php include "../buy_tickets_modals.php"; ?>
 
             <!-- BEGIN FOOTER -->
             <div class='footer'>
