@@ -28,11 +28,13 @@
         <link rel='stylesheet' type='text/css' href='assets/css/media-queries.css'>
         <link rel='stylesheet' type='text/css' href='assets/css/slick.css'>
         <link rel='stylesheet' type='text/css' href='assets/css/slick-theme.css'>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
         <!-- END CONNECTION STYLESHEETS -->
 
         <!-- BEGIN CONNECTION SCRIPTS -->
         <script src='assets/js/jquery-3.5.1.min.js'></script>
         <script src='assets/js/script.js'></script>
+        <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
         <!-- END CONNECTION SCRIPTS -->
     </head>
     <body>
@@ -91,7 +93,7 @@
                                 <span class='date'><?php echo $date['mday'].' '.$date['month'].', AT '; ?> <span class='time'><?php echo $date['hours'].':'.$date['minutes']; ?></span></span>
                                 <span class='name'><?php echo $tournament->name; ?></span>
                                 <span class='game-description'>Tournament organizer Spartans</span>
-                                <p><input type='button' value='Получить id и пароль'></p>
+                                <p><input type='button' class="get_idpass" data-id="<?php echo $tournament->id; ?>" value='Получить id и пароль'></p>
                             </div>
                             <div class='area-2'>
                                 <span class='price'><?php echo $prize ?>&nbsp;<span class='payment_type'>руб.</span></span><br>
@@ -173,7 +175,7 @@
                                 <span class='date'><?php echo $date['mday'].' '.$date['month'].', AT '; ?> <span class='time'><?php echo $date['hours'].':'.$date['minutes']; ?></span></span>
                                 <span class='name'><?php echo $tournament->name; ?></span>
                                 <span class='game-description'>Tournament organizer Spartans</span>
-                                <p><input type='button' value='Получить id и пароль'></p>
+                                <p><input type='button' class="get_idpass" data-id="<?php echo $tournament->id; ?>" value='Получить id и пароль'></p>
                             </div>
                             <div class='area-2'>
                                 <span class='price'><?php echo $prize ?>&nbsp;<span class='payment_type'>руб.</span></span><br>
@@ -258,6 +260,31 @@
         </div>
         <!-- END WRAPPER -->
 
+        <input type="hidden" id="get_idpass_tourid">
+        <script>
+            $('.get_idpass').click(function () {
+                $('#get_idpass_tourid').val($(this).attr('data-id'));
+                $.ajax({
+                    type: "POST",
+                    url: '../tournaments/actions.php',
+                    data: {
+                        "action": 'get_idpass',
+                        "id": $('#get_idpass_tourid').val()
+                    },
+                    success: function(data) {
+                        $.fancybox.open(data);
+                    },
+                    //dataType: dataType
+                });
+            });
+        </script>
+        <script>
+            $('.game').hover(function () {
+                $(this).find('.game-status').removeAttr('hidden').css('opacity', '0.7');
+            }, function () {
+                $(this).find('.game-status').attr('hidden', 'hidden');
+            } );
+        </script>
         <script src='assets/js/slick.min.js'></script>
     </body>
 </html>

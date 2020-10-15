@@ -149,7 +149,8 @@
                 opts : {
                     afterShow : function( instance, current ) {
                         //console.info( 'done!' );
-                    }
+                    },
+                    "touch" : false
                 }
             });
             var tickets = $(this).attr('data-tickets');
