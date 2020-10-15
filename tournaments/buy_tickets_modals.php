@@ -35,12 +35,12 @@
     <input type="hidden" value="0" id="val_tickets">
     <input type="hidden" value="<?php echo $user->id ?>" id="uid">
     <div class="items_tickets">
-        <div class="item_ticket">
+        <a class="item_ticket robokassa" href="/buy_tickets/robokassa.php?summ=10" style="outline: none">
             <img class="img_ticket" src="../../img/RoboKassa.png" alt="robokassa">
             <div class="info_tickets">
                 <p>RoboKassa</p>
             </div>
-        </div>
+        </a>
         <div class="item_ticket" id="buy_balance">
             <img class="img_ticket" src="../../img/ruble.png" alt="balance">
             <div class="info_tickets">

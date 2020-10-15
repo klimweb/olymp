@@ -68,6 +68,7 @@ $('#tournament_tickets .item_ticket').click(function () {
 	}
 	$('#for_oplata').text(price);
 	$('#val_tickets').val(tickets);
+	$('.items_tickets .robokassa').attr('href', '/buy_tickets/robokassa.php?summ='+price);
 });
 
 $('#buy_balance').click(function() {
