@@ -35,9 +35,10 @@ html, body {
 }
 
 .fancybox-content {
-    color: #0B0B0B;
+    color: #fff;
     font-weight: 600;
     font-size: 16px;
+    background: #16161a !important;
 }
 
 #buy_tournament_tickets {
@@ -45,11 +46,11 @@ html, body {
     border-radius: 15px
 }
 
-#buy_tournament_tickets h2 {
+#buy_tournament_tickets h2, #tournament_tickets h2 {
     font: bold 36px Lato, Arial, Sans-serif;
     margin-bottom: 20px;
 }
-#buy_tournament_tickets .items_tickets .item_ticket {
+#buy_tournament_tickets .items_tickets .item_ticket, #tournament_tickets .items_tickets .item_ticket {
     margin: 10px !important
 }
 
